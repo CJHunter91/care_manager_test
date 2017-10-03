@@ -1,6 +1,6 @@
 <article id="room-edit" class="main-view">
 <h4>Edit Room</h4>
-<%= form_for :room, url: rooms_path, method: :put do |form| %>
+<%= form_for :room, url: {action: 'update'}, method: :put do |form| %>
 <%= form.text_field :room_no, placeholder: "Enter Room Number...", :required => true %>
 <%= form.label :premier%>
 <%= form.check_box :premier, {}, 'true', 'false' %>
@@ -10,5 +10,6 @@
 <%= form.number_field :capacity, in: 1..5, :value => 1, :required => true %>
 <%= form.submit "Update", :class => "btn" %>
 <% end %> 
+<p id="notice"><%= notice %></p>
 </article>
 

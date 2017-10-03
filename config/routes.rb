@@ -29,5 +29,5 @@ Rails.application.routes.draw do
 
   get 'rooms/:id/edit' => 'rooms#edit', as: :room_edit
 
-  put 'rooms/:id' => 'residents#update'
+  put 'rooms/:id' => 'rooms#update'
 end

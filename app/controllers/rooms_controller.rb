@@ -15,7 +15,7 @@ class RoomsController < ApplicationController
 
   def create
     if Room.number_exists?(room_params[:room_no])
-      flash[:message] = 'Room already exists!'
+      flash[:notice] = 'Room already exists!'
       redirect_to rooms_new_path
     else
       Room.create(room_params)
@@ -36,7 +36,11 @@ class RoomsController < ApplicationController
 
   def update
     @room = Room.find(params[:id])
-    if @room.update_attributes(room_params)
+    # checks if number exists and continue if unchanged
+    if Room.number_exists?(room_params[:room_no]) && room_params[:room_no].to_i != @room.room_no
+      flash[:notice] = 'Room already exists!'
+      redirect_to room_edit_url(@room)
+    elsif @room.update_attributes(room_params)
       redirect_to rooms_path
     end
   end
