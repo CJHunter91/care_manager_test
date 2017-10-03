@@ -10,6 +10,7 @@ class RoomsController < ApplicationController
 
   def show
     @room = Room.find(params[:id])
+    @residents = Room.find(params[:id]).residents
   end
 
   def create

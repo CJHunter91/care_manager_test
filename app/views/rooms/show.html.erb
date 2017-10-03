@@ -7,5 +7,9 @@
     <li>Capacity <%= @room.capacity %></li>
   </ul>
   <%= link_to "Edit Room", room_edit_url %>
-  <%= link_to "Remove Room", @room, method: :delete, data: { confirm: 'Remove Room?' } %>
+  <% if @residents.count <= 0 %>
+  <%= link_to 'Remove Room',  @room,  method: :delete, data: { confirm: 'Remove Room?' } %>
+  <% else %>
+  <%="Remove or move residents to delete this room"%>
+  <% end %>
 </article>
