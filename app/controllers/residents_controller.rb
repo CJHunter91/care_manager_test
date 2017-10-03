@@ -30,5 +30,9 @@ class ResidentsController < ApplicationController
   end
 
   def update
+    @resident = Resident.find(params[:id])
+    if @resident.update_attributes(resident_params)
+      redirect_to resident_path(@resident)
+    end
   end
 end
