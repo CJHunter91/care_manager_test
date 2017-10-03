@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'rooms/index'
+
+  get 'rooms/show'
+
+  get 'rooms/create'
+
+  get 'rooms/new'
+
+  get 'rooms/destroy'
+
+  get 'rooms/edit'
+
+  get 'rooms/update'
+
   root 'residents#index'
   
   get 'residents/new' => 'residents#new'
