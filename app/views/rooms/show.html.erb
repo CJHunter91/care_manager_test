@@ -6,4 +6,6 @@
     <li>En Suite <%= @room.en_suite %></li>
     <li>Capacity <%= @room.capacity %></li>
   </ul>
+  <%= link_to "Edit Room", room_edit_url %>
+  <%= link_to "Remove Room", @room, method: :delete, data: { confirm: 'Remove Room?' } %>
 </article>
