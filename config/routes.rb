@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   get 'rooms' => 'rooms#index'
 
-  get 'rooms/show'
+  get 'rooms/:id' => 'rooms#show', as: :room
 
   get 'rooms/create'
 

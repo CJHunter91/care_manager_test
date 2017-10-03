@@ -1,2 +1,8 @@
-<h1>Rooms#show</h1>
-<p>Find me in app/views/rooms/show.html.erb</p>
+<article id="room-show" class="main-article">
+  <h4> Room Number: <%= @room.room_no %></h4>
+
+  <ul>
+    <li>Premier <%= @room.premier %></li>    
+    <li>En Suite <%= @room.en_suite %></li>
+    <li>Capacity <%= @room.capacity %></li>
+  </ul>
