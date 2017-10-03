@@ -9,6 +9,7 @@ class ResidentsController < ApplicationController
 
   def create
     Resident.create(params.require(:resident).permit([:first_name, :last_name, :dob, :room_id]))
+    redirect_to root_path
   end
 
   def new
