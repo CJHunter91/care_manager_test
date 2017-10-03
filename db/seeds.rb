@@ -12,10 +12,10 @@ Room.delete_all
 
 room1 = Room.create(room_no: 1, premier: false, en_suite: false, capacity: 1)
 room2 = Room.create(room_no: 2, premier: false, en_suite: true, capacity: 2)
-room3 = Room.create(room_no: 3, premier: true, en_suite: true, capacity: 1)
-room4 = Room.create(room_no: 4, premier: true, en_suite: true, capacity: 1)
+room3 = Room.create(room_no: 3, premier: false, en_suite: false, capacity: 1)
+room4 = Room.create(room_no: 4, premier: false, en_suite: true, capacity: 1)
 room5 = Room.create(room_no: 5, premier: true, en_suite: true, capacity: 1)
-room6 = Room.create(room_no: 6, premier: true, en_suite: true, capacity: 1)
+room6 = Room.create(room_no: 6, premier: false, en_suite: true, capacity: 1)
 room7 = Room.create(room_no: 7, premier: true, en_suite: true, capacity: 1)
 
 
