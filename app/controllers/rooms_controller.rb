@@ -1,4 +1,9 @@
 class RoomsController < ApplicationController
+  
+  def room_params
+    params.require(:room).permit([:room_no, :premier, :en_suite, :capacity])
+  end
+
   def index
     @rooms = Room.all
   end
@@ -8,6 +13,8 @@ class RoomsController < ApplicationController
   end
 
   def create
+    Room.create(room_params)
+    redirect_to action: 'index'
   end
 
   def new

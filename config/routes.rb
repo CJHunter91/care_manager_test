@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get 'rooms/:id' => 'rooms#show', as: :room
 
-  get 'rooms/create'
+  post 'rooms' => 'rooms#create'
 
   get 'rooms/destroy'
 
