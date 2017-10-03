@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   get 'residents/destroy'
 
-  get 'residents/edit'
+  get 'residents/:id/edit' => 'residents#edit'
 
-  get 'residents/update'
+  put 'residents/:id' => 'residents#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

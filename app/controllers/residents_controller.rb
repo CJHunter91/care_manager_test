@@ -1,4 +1,9 @@
 class ResidentsController < ApplicationController
+  
+  def resident_params
+    params.require(:resident).permit([:first_name, :last_name, :dob, :room_id])
+  end
+
   def index
     @residents = Resident.all
   end
@@ -8,7 +13,7 @@ class ResidentsController < ApplicationController
   end
 
   def create
-    Resident.create(params.require(:resident).permit([:first_name, :last_name, :dob, :room_id]))
+    Resident.create(resident_params)
     redirect_to root_path
   end
 
@@ -20,6 +25,8 @@ class ResidentsController < ApplicationController
   end
 
   def edit
+    @resident = Resident.find(params[:id])
+    @rooms = Room.all
   end
 
   def update
