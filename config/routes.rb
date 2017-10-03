@@ -19,11 +19,11 @@ Rails.application.routes.draw do
 
   get 'rooms' => 'rooms#index'
 
+  get 'rooms/new' => 'rooms#new'
+
   get 'rooms/:id' => 'rooms#show', as: :room
 
   get 'rooms/create'
-
-  get 'rooms/new'
 
   get 'rooms/destroy'
 
