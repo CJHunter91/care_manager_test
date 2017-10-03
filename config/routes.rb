@@ -30,6 +30,4 @@ Rails.application.routes.draw do
   get 'rooms/:id/edit' => 'rooms#edit', as: :room_edit
 
   put 'rooms/:id' => 'residents#update'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

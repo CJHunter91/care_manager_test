@@ -18,7 +18,8 @@ class ResidentsController < ApplicationController
   end
 
   def new
-    @rooms = Room.all
+    @residents = Resident.all
+    @rooms = Room.get_available_rooms(@residents)
   end
 
   def destroy
