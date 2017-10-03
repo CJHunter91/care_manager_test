@@ -8,6 +8,7 @@ class ResidentsController < ApplicationController
   end
 
   def create
+    Resident.create(params.require(:resident).permit([:first_name, :last_name, :dob, :room_id]))
   end
 
   def new

@@ -1,7 +1,7 @@
 <article id="resident-new" class="main-article">
 
 <h4>Add New Resident</h4>
-  <%= form_for :resident do |form| %>
+  <%= form_for :resident, url: residents_path do |form| %>
   <%= form.text_field :first_name, :required => true  %>
   <%= form.text_field :last_name, :required => true  %>
   <%= form.date_field :dob, :required => true  %>
