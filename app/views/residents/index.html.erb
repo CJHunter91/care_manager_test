@@ -1,2 +1,17 @@
-<h1>Residents#index</h1>
-<p>Find me in app/views/residents/index.html.erb</p>
+<article id="resident-index" class="main-article">
+  <h3>Current Residents</h3>
+  <table class="main-table">
+    <tr>
+      <th>Forename</th>
+      <th>Surname</th>
+      <th>Room #</th>
+    </tr>
+    <% @residents.each do |resident|%>
+    <tr>
+      <td><%= resident.first_name %></td>
+      <td><%= resident.last_name %></td>
+      <td><%= resident.room.room_no %></td>
+    </tr>
+    <% end %>
+  </table>
+</article>
