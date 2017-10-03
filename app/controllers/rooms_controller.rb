@@ -24,8 +24,13 @@ class RoomsController < ApplicationController
   end
 
   def edit
+    @room = Room.find(params[:id])
   end
 
   def update
+    @room = Room.find(params[:id])
+    if @room.update_attributes(room_params)
+      redirect_to rooms_path
+    end
   end
 end

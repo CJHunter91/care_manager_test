@@ -1,2 +1,14 @@
-<h1>Rooms#edit</h1>
-<p>Find me in app/views/rooms/edit.html.erb</p>
+<article id="room-edit" class="main-view">
+<h4>Edit Room</h4>
+<%= form_for :room, url: rooms_path, method: :put do |form| %>
+<%= form.text_field :room_no, placeholder: "Enter Room Number...", :required => true %>
+<%= form.label :premier%>
+<%= form.check_box :premier, {}, 'true', 'false' %>
+<%= form.label :en_suite%>
+<%= form.check_box :en_suite, {}, 'true', 'false' %>
+<%= form.label :capacity%>
+<%= form.number_field :capacity, in: 1..5, :value => 1, :required => true %>
+<%= form.submit "Update", :class => "btn" %>
+<% end %> 
+</article>
+

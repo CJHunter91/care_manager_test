@@ -27,9 +27,9 @@ Rails.application.routes.draw do
 
   get 'rooms/destroy'
 
-  get 'rooms/edit'
+  get 'rooms/:id/edit' => 'residents#edit'
 
-  get 'rooms/update'
+  put 'rooms/:id' => 'residents#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
