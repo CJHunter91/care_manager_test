@@ -11,6 +11,7 @@ class ResidentsController < ApplicationController
   end
 
   def new
+    @rooms = Room.all
   end
 
   def destroy

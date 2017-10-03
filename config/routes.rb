@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   root 'residents#index'
+  
+  get 'residents/new' => 'residents#new'
 
   get 'residents/:id' => 'residents#show', as: :resident
 
-  get 'residents/create'
-
-  get 'residents/new'
+  post 'residents' => 'residents#create'
 
   get 'residents/destroy'
 

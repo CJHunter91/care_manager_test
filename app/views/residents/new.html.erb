@@ -1,2 +1,11 @@
-<h1>Residents#new</h1>
-<p>Find me in app/views/residents/new.html.erb</p>
+<article id="resident-new" class="main-article">
+
+<h4>Add New Resident</h4>
+  <%= form_for :resident do |form| %>
+  <%= form.text_field :first_name, :required => true  %>
+  <%= form.text_field :last_name, :required => true  %>
+  <%= form.date_field :dob, :required => true  %>
+  <%= form.select :room_id, options_from_collection_for_select(@rooms, 'id', 'room_no') %>
+  <%= form.submit "Add", :class => "btn" %>
+  <% end %> 
+</article>
