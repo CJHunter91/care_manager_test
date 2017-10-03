@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   delete 'residents/:id' => 'residents#destroy'
 
-  get 'residents/:id/edit' => 'residents#edit'
+  get 'residents/:id/edit' => 'residents#edit', as: :resident_edit
 
   put 'residents/:id' => 'residents#update'
 
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
 
   delete 'rooms/:id' => 'rooms#destroy'
 
-  get 'rooms/:id/edit' => 'residents#edit'
+  get 'rooms/:id/edit' => 'residents#edit', as: :room_edit
 
   put 'rooms/:id' => 'residents#update'
 
