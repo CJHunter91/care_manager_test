@@ -15,16 +15,16 @@
   <section id="main">
     <nav>
       <ul>
-        <li>
+        <li id="rooms-nav">
           <%= link_to "Rooms", rooms_path%>
           <ul>
-            <li><%= link_to "Add Room", rooms_new_path %></li>
+            <li id="add-room-nav" class="hidden"><%= link_to "Add Room", rooms_new_path %></li>
           </ul>
         </li>
-        <li>
+        <li id="residents-nav">
           <%= link_to "Residents", root_path%>
           <ul>
-            <li><%= link_to "Add Resident", residents_new_path %></li>
+            <li id="add-resident-nav" class="hidden"><%= link_to "Add Resident", residents_new_path %></li>
           </ul>
         </li>
       </ul>
