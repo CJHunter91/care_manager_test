@@ -11,6 +11,7 @@
       <td><%= resident.first_name %></td>
       <td><%= resident.last_name %></td>
       <td><%= resident.room.room_no %></td>
+      <td><%= link_to "View Details", resident_path(resident) %></td>
     </tr>
     <% end %>
   </table>

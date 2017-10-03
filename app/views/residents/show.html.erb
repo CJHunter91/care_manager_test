@@ -1,2 +1,7 @@
-<h1>Residents#show</h1>
-<p>Find me in app/views/residents/show.html.erb</p>
+<article id="resident-show" class="main-article">
+  <h4> <%= @resident.first_name %> <%= @resident.last_name %> </h4>
+  <ul>
+    <li>DOB: <%= @resident.dob%></li>
+    <li>Room Number: <%= @resident.room.room_no%></li>
+  </ul>
+</article>

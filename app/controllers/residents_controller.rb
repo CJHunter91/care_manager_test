@@ -4,6 +4,7 @@ class ResidentsController < ApplicationController
   end
 
   def show
+    @resident = Resident.find(params[:id])
   end
 
   def create
