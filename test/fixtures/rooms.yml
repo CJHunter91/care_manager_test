@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room_no: 1
+  premier: false
+  en_suite: false
+  capacity: 1
+
+two:
+  room_no: 1
+  premier: false
+  en_suite: false
+  capacity: 1
