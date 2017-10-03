@@ -1,6 +1,7 @@
 <article id="resident-new" class="main-article">
 
 <h4>Add New Resident</h4>
+<% if @rooms.count > 0 %>
   <%= form_for :resident, url: residents_path do |form| %>
   <%= form.text_field :first_name, :required => true  %>
   <%= form.text_field :last_name, :required => true  %>
@@ -8,4 +9,11 @@
   <%= form.select :room_id, options_from_collection_for_select(@rooms, 'id', 'room_no') %>
   <%= form.submit "Add", :class => "btn" %>
   <% end %> 
+
+  <% else %>
+
+    <p>There are no rooms available.</p>
+    <%= link_to "Add New Room", rooms_new_path %>
+
+  <% end %>
 </article>
