@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CareManagerApp</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>CareManagerApp</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
+  <header>
+    <h2>Care Manager</h2>
+  </header>
+  <section id="main">
+    <nav>
+      <ul>
+        <li>
+          <%= link_to "Rooms", rooms_path%>
+          <ul>
+            <li><%= link_to "Add Room", rooms_new_path %></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Residents", root_path%>
+          <ul>
+            <li><%= link_to "Add Resident", residents_new_path %></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <%= yield %>
-  </body>
+  </section>
+</body>
 </html>
