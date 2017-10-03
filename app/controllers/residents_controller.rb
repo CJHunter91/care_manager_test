@@ -22,6 +22,10 @@ class ResidentsController < ApplicationController
   end
 
   def destroy
+    @resident = Resident.find(params[:id])
+    if @resident.destroy!
+      redirect_to root_path 
+    end
   end
 
   def edit

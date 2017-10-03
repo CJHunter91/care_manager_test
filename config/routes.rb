@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   post 'residents' => 'residents#create'
 
-  get 'residents/destroy'
+  delete 'residents/:id' => 'residents#destroy'
 
   get 'residents/:id/edit' => 'residents#edit'
 
