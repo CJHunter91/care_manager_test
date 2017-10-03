@@ -14,13 +14,17 @@ class RoomsController < ApplicationController
 
   def create
     Room.create(room_params)
-    redirect_to action: 'index'
+    redirect_to rooms_path
   end
 
   def new
   end
 
   def destroy
+    @room = Room.find(params[:id])
+    if @room.destroy!
+      redirect_to rooms_path
+    end
   end
 
   def edit
