@@ -3,7 +3,6 @@
 <%= form_for :room, url: rooms_path do |form| %>
 <%= form.text_field :room_no, placeholder: "Enter Room Number...", :required => true %>
 <p id="notice"><%= notice %></p>
-
 <%= form.label :premier%>
 <%= form.check_box :premier, {}, 'true', 'false' %>
 <%= form.label :en_suite%>

@@ -1,24 +1,21 @@
-# README
+Care Manager App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Author Christopher Hunter
 
-Things you may want to cover:
+This web application allows the user to manage a list of rooms and the residents who occupy them. It also uses CRUD operations to allow the user to add/edit/remove rooms and residents. Semantic HTML was used to help with user accessibility and SEO.
 
-* Ruby version
+ The app follows a RESTful design strategy which uses an embedded Ruby front-end. The routes can easily be changed to render JSON and serve as an API allowing the use of a different front-end language or framework.
 
-* System dependencies
+Main challenges while creating this app was checking if rooms had reached capacity and stopping the user deleting rooms containing residents.
 
-* Configuration
+* Ruby version - 2.4.1p111
+* mysql2 version (0.4.9)
 
-* Database creation
 
-* Database initialization
+Use `bundle install` to install all dependencies
 
-* How to run the test suite
+Run server using `rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
+Run test suite using `rake test`
 
-* Deployment instructions
-
-* ...
+Use browser to visit [http://localhost:3000/](http://localhost:3000/)
