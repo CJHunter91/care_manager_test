@@ -9,6 +9,7 @@ This web application allows the user to manage a list of rooms and the residents
 Main challenges while creating this app was checking if rooms had reached capacity and stopping the user deleting rooms containing residents.
 
 * Ruby version - 2.4.1p111
+* MySQL version - 5.7.19 
 * mysql2 version (0.4.9)
 
 Use homebrew or equivalent to install mysql
