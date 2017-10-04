@@ -31,7 +31,8 @@ class ResidentsController < ApplicationController
 
   def edit
     @resident = Resident.find(params[:id])
-    @rooms = Room.all
+    @residents = Resident.all
+    @rooms = Room.get_available_rooms(@residents)
   end
 
   def update
