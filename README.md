@@ -11,8 +11,21 @@ Main challenges while creating this app was checking if rooms had reached capaci
 * Ruby version - 2.4.1p111
 * mysql2 version (0.4.9)
 
+Use homebrew or equivalent to install mysql
+
+`brew install mysql`
+
+Install homebrew services
+
+`brew tap homebrew/services`
+
+Start mysql service
+
+`brew services start mysql`
 
 Use `bundle install` to install all dependencies
+
+Setup database `rake db:create db:migrate db:seed`
 
 Run server using `rails s`
 
