@@ -5,7 +5,9 @@
   <%= form.text_field :first_name, :required => true  %>
   <%= form.text_field :last_name, :required => true  %>
   <%= form.date_field :dob, :required => true  %>
+  <label>Room Number: 
   <%= form.select :room_id, options_from_collection_for_select(@rooms, 'id', 'room_no') %>
+  </label>
   <%= form.submit "Add", :class => "btn" %>
   <% end %> 
 </article>

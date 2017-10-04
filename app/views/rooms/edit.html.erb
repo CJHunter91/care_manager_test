@@ -3,12 +3,15 @@
 <%= form_for :room, url: {action: 'update'}, method: :put do |form| %>
 <%= form.text_field :room_no, placeholder: "Enter Room Number...", :required => true %>
 <p id="notice"><%= notice %></p>
-<%= form.label :premier%>
+<label>Premier: 
 <%= form.check_box :premier, {}, 'true', 'false' %>
-<%= form.label :en_suite%>
+</label>
+<label>En Suite: 
 <%= form.check_box :en_suite, {}, 'true', 'false' %>
-<%= form.label :capacity%>
+</label>
+<label>Capacity: 
 <%= form.number_field :capacity, in: 1..5, :value => 1, :required => true %>
+</label>
 <%= form.submit "Update", :class => "btn" %>
 <% end %> 
 </article>
