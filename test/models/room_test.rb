@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class RoomTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "checks if number exists" do
+    assert Room.number_exists?(Room.first.room_no)
+  end
 end
