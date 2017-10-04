@@ -2,6 +2,8 @@
 <h4>New Room</h4>
 <%= form_for :room, url: rooms_path do |form| %>
 <%= form.text_field :room_no, placeholder: "Enter Room Number...", :required => true %>
+<p id="notice"><%= notice %></p>
+
 <%= form.label :premier%>
 <%= form.check_box :premier, {}, 'true', 'false' %>
 <%= form.label :en_suite%>
@@ -10,6 +12,4 @@
 <%= form.number_field :capacity, in: 1..5, :value => 1, :required => true %>
 <%= form.submit "Add", :class => "btn" %>
 <% end %> 
-<p id="notice"><%= notice %></p>
-
 </article>

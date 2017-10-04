@@ -34,6 +34,10 @@ header{
   text-align: center;
 }
 
+#notice{
+  color: var(--main-color)
+}
+
 nav, #main, .main-view form{
   display: flex;
   padding: 8px;
