@@ -1,4 +1,4 @@
-<article id="room-show" class="main-article">
+<article id="room-show" class="main-view">
   <h4> Room Number: <%= @room.room_no %></h4>
 
   <ul>
@@ -6,9 +6,9 @@
     <li>En Suite <%= @room.en_suite %></li>
     <li>Capacity <%= @room.capacity %></li>
   </ul>
-  <%= link_to "Edit Room", room_edit_url %>
+  <%= link_to "Edit", room_edit_url %>
   <% if @residents.count <= 0 %>
-  <%= link_to 'Remove Room',  @room,  method: :delete, data: { confirm: 'Remove Room?' } %>
+  <%= link_to 'Remove',  @room,  method: :delete, data: { confirm: 'Remove Room?' } %>
   <% else %>
   <%="Remove or move residents to delete this room"%>
   <% end %>

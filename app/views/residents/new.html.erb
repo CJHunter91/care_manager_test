@@ -1,10 +1,10 @@
-<article id="resident-new" class="main-article">
+<article id="resident-new" class="main-view">
 
 <h4>Add New Resident</h4>
 <% if @rooms.count > 0 %>
   <%= form_for :resident, url: residents_path do |form| %>
-  <%= form.text_field :first_name, :required => true  %>
-  <%= form.text_field :last_name, :required => true  %>
+  <%= form.text_field :first_name, placeholder: "Forename", :required => true  %>
+  <%= form.text_field :last_name, placeholder: "Surname",:required => true  %>
   <%= form.date_field :dob, :required => true  %>
   <%= form.select :room_id, options_from_collection_for_select(@rooms, 'id', 'room_no') %>
   <%= form.submit "Add", :class => "btn" %>

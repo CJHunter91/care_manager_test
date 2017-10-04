@@ -1,9 +1,9 @@
-<article id="resident-show" class="main-article">
+<article id="resident-show" class="main-view">
   <h4> <%= @resident.first_name %> <%= @resident.last_name %> </h4>
   <ul>
     <li>DOB: <%= @resident.dob%></li>
     <li>Room Number: <%= @resident.room.room_no%></li>
   </ul>
-  <%= link_to "Edit Resident", resident_edit_url %>
-  <%= link_to "Remove Resident", @resident, method: :delete, data: { confirm: 'Remove Resident?' } %>
+  <%= link_to "Edit", resident_edit_url %>
+  <%= link_to "Remove", @resident, method: :delete, data: { confirm: 'Remove Resident?' } %>
 </article>

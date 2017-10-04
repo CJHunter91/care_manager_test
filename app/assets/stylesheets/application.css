@@ -14,50 +14,85 @@
  *= require_self
  */
 
- body{
-  font-family: Arial;
-  /*background-color: #4ABDAC;*/
-  background-image: url(https://static.pexels.com/photos/9198/nature-sky-twilight-grass-9198.jpg);
-  
+
+ :root {
+   --main-color: #c12b61;
+   --minor-color: #fcf4ec;
+   --highlight-color:#c9c3bc;
  }
+
+
+ body{
+  font-family: Cardo;
+}
+
+#main-title, h3, h4{
+  color: var(--main-color)
+}
 
 header{
   text-align: center;
 }
 
- nav, #main, .main-view form{
+nav, #main, .main-view form{
   display: flex;
   padding: 8px;
- }
+}
 
- nav{
-  flex-basis: 20%; 
- }
-
- nav ul {
-  padding: 10px 0px;
- }
-
- .main-view form{
+.main-view form{
   flex-direction: column;
- }
+}
 
- .main-view{
-  flex-basis: 60%
- }
+nav{
+  flex-basis: 20%; 
+}
 
- .main-view form input,label{
-  padding: 8px
- }
+nav ul {
+  padding: 10px 0px;
+}
 
- nav ul{
+
+.main-view{
+  flex-basis: 60%;
+  background-color: var(--minor-color);
+  border-radius: 5px;
+  width: 70%;
+  padding: 10px;
+}
+
+.main-view a{
+  display: inline-block;
+}
+
+nav ul{
   list-style-type: none;
- }
+}
 
- nav ul li:hover ul li{
-  display: block
- }
 
- .hidden{
-  display: none;
- }
+form{
+  align-items: center;
+}
+
+form input, label, select{
+  margin-top: 10px;
+  width: 40%;
+}
+
+.main-table{
+  width: 100%;
+  text-align: center;
+}
+
+tr:hover {
+  background-color: var(--highlight-color);
+}
+
+a{
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  width: 100px;
+  background-color: var(--main-color);
+  color: white;
+  text-decoration: none
+}
